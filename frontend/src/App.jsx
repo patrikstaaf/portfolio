@@ -1,3 +1,10 @@
+import Navbar from './components/Navbar';
+
 export default function App() {
-  return <div className='grid place-items-center min-h-screen'>Hello</div>;
+  return (
+    <>
+      <Navbar />
+      <main className='grid place-items-center min-h-screen'>Hello</main>
+    </>
+  );
 }
