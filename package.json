@@ -1,0 +1,24 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start:server": "cd backend && sanity start",
+    "start:frontend": "cd frontend && npm run dev",
+    "start": "concurrently \"npm run start:server\" \"npm run start:frontend\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/patrikstaaf/portfolio.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/patrikstaaf/portfolio/issues"
+  },
+  "homepage": "https://github.com/patrikstaaf/portfolio#readme",
+  "dependencies": {
+    "concurrently": "^7.1.0"
+  }
+}

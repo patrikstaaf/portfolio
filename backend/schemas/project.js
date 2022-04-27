@@ -58,6 +58,11 @@ export default {
       type: 'url',
     },
     {
+      name: 'year',
+      title: 'Year',
+      type: 'string',
+    },
+    {
       name: 'projectImage',
       title: 'Project image',
       type: 'image',

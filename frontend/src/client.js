@@ -1,6 +1,9 @@
 import sanityClient from '@sanity/client';
 
 export default sanityClient({
-  projectId: process.env.REACT_APP_SANITY_ID,
-  dataset: process.env.REACT_APP_SANITY_DATASET,
+  projectId: import.meta.env.VITE_SANITY_STUDIO_PROJECT_ID,
+  dataset: import.meta.env.VITE_SANITY_STUDIO_DATASET,
+  apiVersion: import.meta.env.VITE_SANITY_STUDIO_API_VERSION,
+  token: import.meta.env.VITE_SANITY_STUDIO_READ_TOKEN,
+  useCdn: false,
 });
