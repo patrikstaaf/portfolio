@@ -4,6 +4,6 @@ export default sanityClient({
   projectId: import.meta.env.VITE_SANITY_STUDIO_PROJECT_ID,
   dataset: import.meta.env.VITE_SANITY_STUDIO_DATASET,
   apiVersion: import.meta.env.VITE_SANITY_STUDIO_API_VERSION,
-  token: import.meta.env.VITE_SANITY_STUDIO_READ_TOKEN,
+  token: '',
   useCdn: false,
 });
