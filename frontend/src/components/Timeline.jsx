@@ -254,7 +254,7 @@ const Timeline = () => {
           Started studying web dev
         </p>
         <span className='text-xs sm:left-[53%] top-[97%] absolute text-gray-500 hidden sm:block'>
-          Absolutely delighted.
+          Good times.
         </span>
         <p className='left-[28%] sm:left-[37%] top-[92%] sm:top-[91.5%] absolute'>
           2021 -
