@@ -18,6 +18,11 @@ export default {
       },
     },
     {
+      name: 'explanation',
+      title: 'Explanation',
+      type: 'string',
+    },
+    {
       name: 'description',
       title: 'Description',
       type: 'text',

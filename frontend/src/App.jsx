@@ -1,22 +1,26 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Navbar from './components/Navbar';
-import Contact from './components/Contact';
-import Home from './components/Home';
+import About from './components/About';
 import NotFound from './components/NotFound';
+import Projects from './components/Projects';
 import SingleProject from './components/SingleProject';
+import Footer from './components/Footer';
+import TimelinePage from './components/TimelinePage';
 
-export default function App() {
+const App = () => {
   return (
     <BrowserRouter>
-      <Navbar contact='Contact' />
-      <main className='max-w-2xl mx-auto antialiased p-4'>
+      <div className='mx-auto antialiased max-w-2xl font-inter pt-20 pb-32 w-full'>
         <Routes>
           <Route element={<NotFound />} path='*' />
-          <Route element={<Home />} path='/' />
-          <Route element={<Contact />} path='/contact' />
+          <Route element={<About />} path='/' />
+          <Route element={<TimelinePage />} path='/timeline' />
+          <Route element={<Projects />} path='/projects' />
           <Route element={<SingleProject />} path='/project/:slug' />
         </Routes>
-      </main>
+        <Footer />
+      </div>
     </BrowserRouter>
   );
-}
+};
+
+export default App;

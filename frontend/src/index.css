@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+  font-family: 'special';
+  src: url('./fonts/SpecialElite.woff2');
+}
+
+@font-face {
+  font-family: 'inter';
+  src: url('./fonts/InterFont.woff2');
+}

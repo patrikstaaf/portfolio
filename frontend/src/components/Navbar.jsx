@@ -1,10 +1,34 @@
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
-export default function Navbar({ contact }) {
+const Navbar = () => {
   return (
-    <nav className='flex justify-between w-full max-w-2xl mx-auto antialiased p-4'>
-      <Link to='/'>Logo</Link>
-      <Link to='/contact'>{contact}</Link>
+    <nav className='mb-8 flex justify-end gap-3 w-full px-4'>
+      <NavLink
+        to='/'
+        className={({ isActive }) =>
+          isActive ? 'text-slate-800 no-underline' : 'text-gray-500 underline'
+        }
+      >
+        About
+      </NavLink>
+      <NavLink
+        to='/timeline'
+        className={({ isActive }) =>
+          isActive ? 'text-slate-800 no-underline' : 'text-gray-500 underline'
+        }
+      >
+        Timeline
+      </NavLink>
+      <NavLink
+        to='/projects'
+        className={({ isActive }) =>
+          isActive ? 'text-slate-800 no-underline' : 'text-gray-500 underline'
+        }
+      >
+        Projects
+      </NavLink>
     </nav>
   );
-}
+};
+
+export default Navbar;
