@@ -51,16 +51,16 @@ const SingleProject = () => {
       <img
         src={urlFor(singleProject.projectImage).url()}
         alt={singleProject.projectImage.alt}
-        className='mx-auto my-6 px-4'
+        className='mx-auto my-6 px-4 rounded-lg'
       />
       <p className='mb-4 text-left px-4 leading-7'>
         {singleProject.description}
       </p>
       <div className='px-4'>
         {!singleProject.link ? (
-          <p className='py-2 leading-7'>Url: Not deployed.</p>
+          <p className='py-1 leading-7'>Url: Not deployed.</p>
         ) : (
-          <p className='py-2 leading-7'>
+          <p className='py-1 leading-7'>
             Url:{' '}
             <a
               href={singleProject.link}
@@ -73,7 +73,7 @@ const SingleProject = () => {
           </p>
         )}
 
-        <p className='py-2 leading-7'>
+        <p className='py-1 leading-7'>
           GitHub:{' '}
           <a
             href={singleProject.github}

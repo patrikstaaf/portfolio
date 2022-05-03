@@ -8,7 +8,7 @@ const Projects = () => {
 
   useEffect(() => {
     sanityClient
-      .fetch(`*[_type=="project"]`)
+      .fetch(`*[_type=="project"] | order(order asc)`)
       .then((data) => setProjects(data))
       .catch(console.error);
   }, []);
@@ -26,29 +26,31 @@ const Projects = () => {
         humor, I do take pride in my work and strive daily to improve, step by
         step (error by error).
       </p>
-      {projects &&
-        projects.map((project, index) => (
-          <article
-            key={index}
-            className='w-full hover:bg-gray-50 rounded-lg my-2 relative'
-          >
-            <NavLink
-              to={'/project/' + project.slug.current}
-              className='flex justify-around p-4'
+      <ul>
+        {projects &&
+          projects.map((project, index) => (
+            <li
+              key={index}
+              className='w-full hover:bg-gray-50 rounded-lg my-2 relative'
             >
-              <div>
-                <span className='mr-2 font-semibold'>{project.title}</span>
-                <span className='text-sm text-gray-500'>
-                  {project.explanation}
-                </span>
-              </div>
-              <div className='border-b-2 border-dotted border-[#e2e2e2] grow mb-2 mx-4'></div>
-              <div>
-                <span>{project.year}</span>
-              </div>
-            </NavLink>
-          </article>
-        ))}
+              <NavLink
+                to={'/project/' + project.slug.current}
+                className='flex justify-around p-4'
+              >
+                <div>
+                  <span className='mr-2 font-semibold'>{project.title}</span>
+                  <span className='text-sm text-gray-500'>
+                    {project.explanation}
+                  </span>
+                </div>
+                <div className='border-b-2 border-dotted border-[#e2e2e2] grow mb-2 mx-4'></div>
+                <div>
+                  <span>{project.year}</span>
+                </div>
+              </NavLink>
+            </li>
+          ))}
+      </ul>
     </>
   );
 };
