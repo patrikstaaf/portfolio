@@ -5,5 +5,5 @@ export default sanityClient({
   dataset: import.meta.env.VITE_SANITY_STUDIO_DATASET,
   apiVersion: import.meta.env.VITE_SANITY_STUDIO_API_VERSION,
   token: '',
-  useCdn: false,
+  useCdn: true,
 });

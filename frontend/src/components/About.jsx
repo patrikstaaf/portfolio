@@ -35,7 +35,7 @@ const About = () => {
       <p className='py-2 leading-7 px-4'>
         GitHub{' '}
         <a
-          href='https://github.se/patrikstaaf'
+          href='https://github.com/patrikstaaf'
           className='underline text-blue-600 underline-offset-4'
           target='_blank'
           rel='noopener noreferrer'
